@@ -1,0 +1,94 @@
+/* reset css */
+html {
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size:16px;
+    /*font-size: 100%;*/
+    tap-highlight-color:rgba(255,0,0,0);
+    -webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+table { 
+    border-collapse:collapse;
+    border-spacing:0; 
+} 
+fieldset,img { 
+    border: 0; 
+} 
+address,caption,cite,code,dfn,em,strong,th,var { 
+    font-weight: normal;
+    font-style: normal;
+} 
+ol,ul { 
+    list-style:none;
+} 
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+button {
+    outline:none;
+}
+a{
+    text-decoration: none;
+}
+html,body{
+    height:100%;
+}
+/* 清除浮动 */
+.clearfix:after {       
+    content: ".";     /*内容为“.”就是一个英文的句号而已。也可以不写。*/
+    display: block;   /*加入的这个元素转换为块级元素。*/
+    clear: both;     /*清除左右两边浮动。*/
+    visibility: hidden;      /*可见度设为隐藏。注意它和display:none;是有区别的。visibility:hidden;仍然占据空间，只是看不到而已；*/
+    line-height: 0;    /*行高为0；*/
+    height: 0;     /*高度为0；*/
+}
+
+.clearfix { *zoom:1;}   /*这是针对于IE6的，因为IE6不支持:after伪类，这个神奇的zoom:1让IE6的元素可以清除浮动来包裹内部元素。*/
+
+/* 文本溢出省略号 */
+.text-overflow{
+    display:block;
+    width:100%;
+    word-break:keep-all;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+/* 不定宽元素垂直居中对齐 */
+/*父容器*/
+.vertical-box:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    text-align:center;
+}
+/*子容器*/
+.vertical-middle{
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
+}
+/*左右浮动*/
+.fl{float:left;}
+.fr{float:right;}
+.none{display:none;}

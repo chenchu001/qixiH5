@@ -1,0 +1,253 @@
+#content{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    position:absolute;
+}
+.content-wrap{
+    position:relative;
+}
+.content-wrap>li{
+    width:100%;
+    height:100%;
+    background:#CAE1FF;
+    color:red;
+    float:left;
+    overflow:hidden;
+    position:relative;
+}
+/*停止行走的动画*/
+.pauseWalk {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+} 
+/*小男孩行走动画*/
+.slowWalk{
+    /* 填入动画样式规则 */
+    /*规定 @keyframes 动画的名称。*/
+    -webkit-animation-name: person-slow; 
+    /*规定动画完成一个周期所花费的秒或毫秒。默认是 0*/
+    -webkit-animation-duration: 950ms;
+    /*规定动画被播放的次数。默认是 1。 infinite(循环播放)*/
+    -webkit-animation-iteration-count: infinite;
+    /*动画切换的方式是一帧一帧的改变*/
+    -webkit-animation-timing-function: steps(1, start);
+    -moz-animation-name: person-slow;
+    -moz-animation-duration: 950ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: steps(1, start);
+}
+/* 普通慢走 */ 
+@-webkit-keyframes person-slow{
+    0% {
+        background-position: -0px -291px;
+    }
+    25% {
+        background-position: -602px -0px;
+    }
+    50% {
+        background-position: -302px -291px;
+    }
+    75% {
+        background-position: -151px -291px;
+    }
+    100% {
+        background-position: -0px -291px;
+    }
+}
+
+@-moz-keyframes person-slow{
+    0% {
+        background-position: -0px -291px;
+    }
+    25% {
+        background-position: -602px -0px;
+    }
+    50% {
+        background-position: -302px -291px;
+    }
+    75% {
+        background-position: -151px -291px;
+    }
+    100% {
+        background-position: -0px -291px;
+    }
+}
+.slowFlowerWalk{
+    -webkit-animation-name: person-floler-slow;
+    -webkit-animation-duration: 950ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: step-start;
+    -moz-animation-name: person-floler-slow;
+    -moz-animation-duration: 950ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: step-start;
+}
+/*带花*/
+@-webkit-keyframes person-floler-slow {
+   0% {
+       background-position: -453px -0px;
+   }
+   25% {
+       background-position: -904px -0px;
+   }
+   50% {
+       background-position: -451px -0px;
+   }
+   75% {
+       background-position: -753px -0px;
+   }
+   100% {
+       background-position: -300px -0px;
+   }
+}
+
+@-moz-keyframes person-floler-slow {
+   0% {
+       background-position: -453px -0px;
+   }
+   25% {
+       background-position: -904px -0px;
+   }
+   50% {
+       background-position: -451px -0px;
+   }
+   75% {
+       background-position: -753px -0px;
+   }
+   100% {
+       background-position: -300px -0px;
+   }
+}
+/*小男孩复位*/
+.boyOriginal {
+   background-position: -150px -0px;
+}
+/*男孩转身*/
+.boy-rotate {
+   -webkit-animation-name: boy-rotate;
+   -webkit-animation-duration: 850ms;
+   -webkit-animation-iteration-count: 1;
+   -webkit-animation-timing-function: step-start;
+   -webkit-animation-fill-mode: forwards;
+   -moz-animation-name: boy-rotate;
+   -moz-animation-duration: 850ms;
+   -moz-animation-iteration-count: 1;
+   -moz-animation-timing-function: step-start;
+   -moz-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes boy-rotate {
+   0% {
+       background-position: -603px -291px;
+   }
+   16.7% {
+       background-position: -150px -0px;
+   }
+   33.4% {
+       background-position: -453px -291px;
+   }
+   50.1% {
+       background-position: -0px -0px;
+   }
+   66.8% {
+       background-position: -903px -291px;
+   }
+   83.5% {
+       background-position: -753px -291px;
+   }
+   100% {
+       background-position: -603px -291px;
+   }
+}
+
+@-moz-keyframes boy-rotate {
+   0% {
+       /*background-position: -603px -291px;*/
+   }
+   16.7% {
+       background-position: -150px -0px;
+   }
+   33.4% {
+       background-position: -453px -291px;
+   }
+   50.1% {
+       background-position: -0px -0px;
+   }
+   66.8% {
+       background-position: -903px -291px;
+   }
+   83.5% {
+       background-position: -753px -291px;
+   }
+   100% {
+       background-position: -603px -291px;
+   }
+}
+
+/*musicIco*/
+.musicIco{
+    position: fixed;
+    z-index: 5;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid #ef1639;
+    background: #fff;
+    right:30px;
+    top:30px;
+}
+.musicIco>img:first-of-type {
+    position: absolute;
+    top: 24%;
+    right: 2.5%;
+    width: 28.421%;
+    z-index: 6;
+}
+.musicIco>img:last-of-type {
+    width: 79%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.music {
+    animation: xuanzhuan 2s linear infinite;
+    -webkit-animation: xuanzhuan 2s linear infinite;
+}
+/*音乐部分*/
+@keyframes xuanzhuan{
+    0%{
+        -webkit-transform: rotate(0deg);
+           -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+             -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+           -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+             -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes xuanzhuan{
+    0%{
+        -webkit-transform: rotate(0deg);
+           -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+             -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+           -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+             -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+
